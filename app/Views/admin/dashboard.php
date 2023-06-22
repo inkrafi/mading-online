@@ -1,6 +1,4 @@
 <?= $this->extend('layout/admin/template'); ?>
-
-
 <?= $this->section('content'); ?>
 
 
@@ -45,7 +43,7 @@
         <div class="col-md-7">
             <!-- Sub-Bagian 4 -->
             <div class="sub-section sub-section-overflow">
-                <h2 class="pt-3">Komentar</h2>
+                <h2 class="pt-3">Semua Komentar</h2>
                 <ul class="list-group mt-4">
                     <?php foreach ($comments as $comment) : ?>
                         <li class="list-group-item"><?= substr($comment['comment_content'], 0, 80) . "..."; ?></li>

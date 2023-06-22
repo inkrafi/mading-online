@@ -20,7 +20,7 @@
 
     <!-- Tombol Tambahkan Komentar -->
     <div class="col-md mb-3">
-        <a href="/articles/comments" class="btn btn-primary">Tambahkan Komentar</a>
+        <a href="/articles/comments" class="btn btn-dark">Tambahkan Komentar</a>
     </div>
 
 
@@ -31,21 +31,14 @@
                 <h5><?= $article['title']; ?></h5>
                 <hr>
                 <p>
-                    <?= $article['content']; ?>
+                    <?= substr($article['content'], 0, 250) . "..."; ?>
                 </p>
                 <div class="d-flex justify-content-between pb-2">
                     <div class="row">
-                        <!-- <div class="col-md mb-3">
-                            <form action="/articles/<?= $article['slug']; ?>/comments" method="get">
-                                <?= csrf_field(); ?>
-                                <input type="hidden" name="_method" value="<?= $article['article_id']; ?>">
-                                <button type="submit">Tambahkan Komentar</button>
-                            </form>
-                        </div> -->
                     </div>
                     <div class="row">
                         <div class="col-md">
-                            <a href="/articles/<?= $article['slug']; ?>" class="btn btn-dark">Selengkapnya</a>
+                            <a href="/articles/<?= $article['slug']; ?>" class="btn btn-outline-dark">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

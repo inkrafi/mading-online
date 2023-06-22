@@ -1,16 +1,22 @@
 <?= $this->extend('layout/users/template'); ?>
 <?= $this->section('content'); ?>
 <style>
+  body {
+    margin-top: 5rem;
+  }
+
   .card {
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 0 30px;
   }
 </style>
 
 <div class="container">
   <h2 class="mt-5 mb-4"><?= $articles['title']; ?></h2>
-  <div>
-    <p><?= $articles['content']; ?></p>
+  <div class="row">
+    <div class="col-md-8">
+      <p><?= $articles['content']; ?></p>
+    </div>
   </div>
   <br><br>
   <div>
@@ -18,8 +24,8 @@
   </div>
 
   <div class="row mb-5">
-    <div class="card col-6 mt-4">
-      <h3 class="my-3">Kolom Komentar</h3>
+    <div class="card col-lg-6 mt-4">
+      <h3 class="my-3">Tinggalkan Komentar</h3>
       <!-- Flashdata ketika komentar berhasil ditambahkan-->
       <?php if (session()->getFlashdata('msg')) : ?>
         <div class="alert alert-success" role="alert">
@@ -46,7 +52,7 @@
           <div class="row mb-3">
             <label for="comment_content" class="col-sm-2 col-form-label">Komentar</label>
             <div class="col-sm-10">
-              <textarea class="form-control" id="comment_content" rows="5" name="comment_content"></textarea>
+              <textarea class="form-control" id="comment_content" rows="4" name="comment_content"></textarea>
             </div>
           </div>
           <div class="d-flex justify-content-center">

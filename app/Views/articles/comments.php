@@ -13,14 +13,13 @@
         <form action="/comments/store" method="post">
           <?= csrf_field(); ?>
 
-
-          Pilih Artikel :
+          <!-- Dropdown Artikel -->
+          <label for="article_id" class="col-sm-2 col-form-label">Pilih Artikel</label>
           <select name="article_id" class="mb-4">
             <?php foreach ($articles as $article) : ?>
               <option value="<?= $article['article_id']; ?>"><?= $article['title']; ?></option>
             <?php endforeach; ?>
           </select>
-
 
           <!-- Form komentar (nama, email, isi komentar) -->
           <div class="row mb-3">

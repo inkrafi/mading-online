@@ -30,7 +30,7 @@
           <div>
             <strong>Nama</strong> : <?= $comment['name']; ?><br>
             <strong>Email</strong> : <?= $comment['email']; ?><br>
-            <strong>Komentar</strong> : <?= substr($comment['comment_content'], 0, 100) . "..."; ?><br>
+            <strong>Komentar</strong> : <?= substr($comment['comment_content'], 0, 80); ?><br>
           </div>
         </td>
         <td><?= $comment['created_at']; ?></td>
