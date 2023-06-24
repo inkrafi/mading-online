@@ -36,4 +36,11 @@ class CommentsModel extends Model
             'commentCount' => $commentCount
         ];
     }
+
+    public function getCountByCategory()
+    {
+        return $this->select('article_id, COUNT(*) as count')
+            ->groupBy('article_id')
+            ->findAll();
+    }
 }

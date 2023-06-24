@@ -57,7 +57,7 @@ class UserController extends BaseController
 
         $data = [
             'title' => 'Page',
-            'articles' => $articles
+            'articles' => $articles,
         ];
         return view('articles/page', $data);
     }

@@ -9,7 +9,7 @@
                 <a class="nav-link active" href="/admin/dashboard">Home</a>
                 <a class="nav-link" href="/admin/manage_articles">Artikel</a>
                 <a class="nav-link" href="/admin/manage_comments">Komentar</a>
-                <a class="nav-link" href="#">Laporan</a>
+                <a class="nav-link" href="/admin/manage_reports">Laporan</a>
             </div>
         </div>
         <div>

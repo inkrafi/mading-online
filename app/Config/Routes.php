@@ -52,6 +52,10 @@ $routes->delete('/articles/(:num)', 'Articles::delete/$1');
 $routes->get('/admin/manage_comments', 'Comments::manageComments');
 $routes->delete('/comments/(:num)', 'Comments::delete/$1');
 
+// Router Manage Reports
+$routes->get('/admin/manage_reports', 'Admin::manageReports');
+$routes->get('/admin/manage_reports', 'Admin::countByCategory');
+
 
 /*
  * --------------------------------------------------------------------

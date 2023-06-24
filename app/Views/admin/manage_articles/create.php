@@ -1,3 +1,7 @@
+<?php
+
+use PhpParser\Node\Stmt\Foreach_;
+?>
 <?= $this->extend('layout/admin/form/template'); ?>
 <?= $this->section('content'); ?>
 <style>
@@ -12,16 +16,26 @@
       <div class="card-body">
         <form action="/articles/save" method="post">
           <?= csrf_field(); ?>
+          <!-- Judul Artikel -->
           <div class="row mb-3">
             <label for="title" class="col-sm-2 col-form-label">Judul Artikel</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="title" name="title">
+              <!-- Validasi input judul -->
+              <input type="text" class="form-control <?= (session()->getFlashdata('_ci_validation_errors')) ? 'is-invalid' : ''; ?>" id="title" name="title" value="<?= old('title'); ?>">
+              <div class="invalid-feedback">
+                judul artikel harus diisi.
+              </div>
             </div>
           </div>
+          <!-- Isi Artikel -->
           <div class="row mb-3">
             <label for="content" class="col-sm-2 col-form-label">Isi Artikel</label>
             <div class="col-sm-10">
-              <textarea class="form-control" id="content" rows="10" name="content"></textarea>
+              <!-- Validasi input isi artikel -->
+              <textarea class="form-control <?= (session()->getFlashdata('_ci_validation_errors')) ? 'is-invalid' : ''; ?>" id="content" rows="10" name="content" value="<?= old('content'); ?>"></textarea>
+              <div class="invalid-feedback">
+                isi artikel harus diisi.
+              </div>
             </div>
           </div>
           <div class="d-flex justify-content-center">
