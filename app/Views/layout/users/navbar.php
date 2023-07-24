@@ -10,9 +10,9 @@
                 <a class="nav-link active" href="/articles">Artikel</a>
             </div>
         </div>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Cari Artikel" aria-label="Search">
+        <!-- <form action="" method="post" class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Cari Artikel" aria-label="Search" name="keyword">
             <button class="btn btn-outline-secondary" type="submit">Cari</button>
-        </form>
+        </form> -->
     </div>
 </nav>

@@ -27,8 +27,15 @@ class UserController extends BaseController
 
     public function articles()
     {
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $findArticle = $this->articlesModel->search($keyword);
+        } else {
+            $findArticle = $this->articlesModel;
+        }
+
         // Mengambil data artikel dari database menggunakan model
-        $articles = $this->articlesModel->getArticles();
+        $articles = $findArticle->getArticles();
 
         $data = [
             'title' => 'Artikel | Berita Terkini',

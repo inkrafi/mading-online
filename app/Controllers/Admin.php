@@ -73,7 +73,7 @@ class Admin extends BaseController
         $commentCount = $this->commentsModel->getCountsComments();
 
         $data = [
-            'title' => 'Manage Reports',
+            'title' => 'Laporan Mading Online.pdf',
             'title_page' => 'Mengatur Laporan',
             'breadcrumb' => 'Laporan',
             'articles' => $articles,

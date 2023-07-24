@@ -17,6 +17,15 @@ class ArticlesModel extends Model
         return $this->findAll();
     }
 
+    public function getSlugArticles($slug = false)
+    {
+        if ($slug == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['slug' => $slug])->first();
+    }
+
     public function getCountsArticles()
     {
         $articleCount = $this->db->table('articles')->countAllResults();
@@ -24,5 +33,10 @@ class ArticlesModel extends Model
         return [
             'articleCount' => $articleCount,
         ];
+    }
+
+    public function search($keyword)
+    {
+        return $this->table('articles')->like('title', $keyword);
     }
 }

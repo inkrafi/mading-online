@@ -32,7 +32,7 @@
                 <td><?= $article['created_at']; ?></td>
                 <td>
                     <!-- Tombol Hapus Artikel -->
-                    <form action="/articles/<?= $article['article_id']; ?>" method="post">
+                    <form action="/articles/<?= $article['article_id']; ?>" method="post" class="d-inline">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="_method" value="DELETE">
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin menghapus artikel?');">Delete</button>

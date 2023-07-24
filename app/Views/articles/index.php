@@ -9,7 +9,7 @@
 </style>
 
 <div class="container">
-    <h2 class="mt-5 mb-4">BERITA TERKINI</h2>
+    <h2 class="mt-5 mb-4">INFORMASI TERKINI</h2>
 
     <!-- Flashdata ketika komentar berhasil ditambahkan-->
     <?php if (session()->getFlashdata('msg')) : ?>
@@ -18,11 +18,20 @@
         </div>
     <?php endif; ?>
 
+    <!-- Search -->
+    <!-- <div class="col-6">
+        <form action="" method="post">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Cari" name="keyword">
+                <button class="btn btn-outline-secondary" type="submit" name="submit">Cari</button>
+            </div>
+        </form>
+    </div> -->
+
     <!-- Tombol Tambahkan Komentar -->
     <div class="col-md mb-3">
         <a href="/articles/comments" class="btn btn-dark">Tambahkan Komentar</a>
     </div>
-
 
     <!-- List Artikel dari manage_article -->
     <?php foreach ($articles as $article) : ?>

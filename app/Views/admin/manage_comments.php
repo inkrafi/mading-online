@@ -37,7 +37,7 @@
         <td>
 
           <!-- Tombol Info -->
-          <button class="btn btn-primary btn-warning mb-1" data-bs-toggle="modal" data-bs-target="#commentInfoModal-<?= $comment['comment_id']; ?>">
+          <button class="btn btn-primary btn-success mb-1" data-bs-toggle="modal" data-bs-target="#commentInfoModal-<?= $comment['comment_id']; ?>">
             Detail
           </button>
 
