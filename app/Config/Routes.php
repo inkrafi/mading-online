@@ -46,6 +46,7 @@ $routes->get('/admin/dashboard', 'Admin::index');
 // Router Manage Articles
 $routes->get('/admin/manage_articles', 'Articles::manageArticles');
 $routes->get('/admin/manage_articles/create', 'Articles::create');
+$routes->get('/admin/manage_articles/edit/(:segment)', 'Articles::edit/$1');
 $routes->delete('/articles/(:num)', 'Articles::delete/$1');
 
 // Router Manage Comments

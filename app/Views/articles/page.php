@@ -9,17 +9,30 @@
     border-radius: 6px;
     padding: 0 30px;
   }
+
+  .btn-article {
+    background-color: #00A388;
+    color: white;
+  }
+
+  .btn-article:hover {
+    color: white;
+  }
+
+  .space {
+    margin-top: 150px;
+  }
 </style>
 
 <div class="container">
   <h2 class="mt-5 mb-4"><?= $articles['title']; ?></h2>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-7">
       <p><?= $articles['content']; ?></p>
     </div>
   </div>
   <br><br>
-  <div>
+  <div class="space">
     <p>Diposting tanggal : <?= $articles['created_at']; ?> WIB</p>
   </div>
 
@@ -52,12 +65,12 @@
           <div class="row mb-3">
             <label for="comment_content" class="col-sm-2 col-form-label">Komentar</label>
             <div class="col-sm-10">
-              <textarea class="form-control" id="comment_content" rows="4" name="comment_content" required></textarea>
+              <textarea class="form-control" id="comment_content" rows="3" name="comment_content" required></textarea>
             </div>
           </div>
           <div class="d-flex justify-content-center">
             <input type="hidden" name="article_id" value="<?= $articles['article_id']; ?>">
-            <button type="submit" class="btn btn-dark">Tambahkan Komentar</button>
+            <button type="submit" class="btn btn-article">Tambahkan Komentar</button>
           </div>
         </form>
       </div>

@@ -67,4 +67,30 @@ class Articles extends BaseController
 
         return redirect()->to('/admin/manage_articles');
     }
+
+    public function edit($slug)
+    {
+        $data = [
+            'title' => 'Form Ubah Data Artikel',
+            'validation' => \Config\Services::validation(),
+            'articles' => $this->articlesModel->getSlugArticles($slug)
+        ];
+
+        return view('/admin/manage_articles/edit', $data);
+    }
+
+    public function update($article_id)
+    {
+        $slug = url_title($this->request->getVar('title'), '-', true);
+        $this->articlesModel->save([
+            'article_id' => $article_id,
+            'title'     => $this->request->getVar('title'),
+            'slug'      => $slug,
+            'content'   => $this->request->getVar('content'),
+        ]);
+
+        session()->setFlashdata('msg', 'Data artikel berhasil diubah.');
+
+        return redirect()->to('/admin/manage_articles');
+    }
 }

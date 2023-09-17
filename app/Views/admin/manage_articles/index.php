@@ -31,6 +31,8 @@
                 <td><?= $article['title']; ?></td>
                 <td><?= $article['created_at']; ?></td>
                 <td>
+                    <!-- Tombol Edit Artikel -->
+                    <a href="/admin/manage_articles/edit/<?= $article['slug']; ?>" class="btn btn-warning">Edit</a>
                     <!-- Tombol Hapus Artikel -->
                     <form action="/articles/<?= $article['article_id']; ?>" method="post" class="d-inline">
                         <?= csrf_field(); ?>

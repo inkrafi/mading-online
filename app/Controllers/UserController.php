@@ -63,7 +63,7 @@ class UserController extends BaseController
         $articles = $this->articlesModel->where(['slug' => $slug])->first();
 
         $data = [
-            'title' => 'Page',
+            'title' => 'Page Article',
             'articles' => $articles,
         ];
         return view('articles/page', $data);
